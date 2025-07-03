@@ -13,9 +13,13 @@
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
     "upgrade:dry": "npx @strapi/upgrade latest --dry",
-    "prepare": "husky",
     "prettier": "prettier ./src/ --write",
-    "lint": "eslint ./src/ --config eslint.config.mjs"
+    "lint": "eslint ./src/ --config eslint.config.mjs",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darkfos/aboutMe-backend.git"
   },
   "dependencies": {
     "@eslint/js": "^9.30.1",
