@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_components_image_blocks",
+  "info": {
+    "displayName": "ImageBlock"
+  },
+  "options": {},
+  "attributes": {
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "alt": {
+      "type": "string"
+    },
+    "isHeader": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}

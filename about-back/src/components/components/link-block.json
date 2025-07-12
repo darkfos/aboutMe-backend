@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_components_link_blocks",
+  "info": {
+    "displayName": "LinkBlock"
+  },
+  "options": {},
+  "attributes": {
+    "alt": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

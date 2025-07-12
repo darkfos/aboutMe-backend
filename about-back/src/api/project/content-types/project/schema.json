@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "theme": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::theme.theme",
+      "inversedBy": "projects"
+    },
+    "title": {
+      "type": "string"
+    },
+    "authors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "projects"
+    },
+    "section": {
+      "type": "dynamiczone",
+      "components": [
+        "components.text-block",
+        "components.link-block",
+        "components.image-block"
+      ]
+    },
+    "views": {
+      "type": "biginteger"
+    },
+    "likes": {
+      "type": "biginteger"
+    }
+  }
+}
