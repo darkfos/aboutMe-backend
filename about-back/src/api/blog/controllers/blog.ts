@@ -7,7 +7,7 @@ import { factories } from '@strapi/strapi'
 export default factories.createCoreController('api::blog.blog', ({strapi}) => ({
     async findByThemes(ctx) {
         try {
-            const { themes, page = 1, limit = 10 } = ctx.request.query;
+            const { title, themes, page = 1, limit = 10 } = ctx.request.query;
 
             const themeFormat: Array<string> = JSON.parse((themes as string).replace(/'/g, '"'));
 
@@ -28,10 +28,14 @@ export default factories.createCoreController('api::blog.blog', ({strapi}) => ({
                         }
                     },
                     theme: true,
-                    createdBy: true,
-                    updatedBy: true
+                    author: {
+                        fields: ["username"]
+                    }
                 },
                 filters: {
+                    title: {
+                        $containsi: (title as string)
+                    },
                     theme: {
                         name: {
                             $in: JSON.parse((themes as string).replace(/'/g, '"'))
